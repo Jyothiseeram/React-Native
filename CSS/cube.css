@@ -1,0 +1,84 @@
+body{
+    background-color: black;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+     height: 100svh;
+}
+.cube{
+    height: 200px;
+    width: 200px;
+   perspective: 1000px;
+    transform-style: preserve-3d;
+    animation: myanimation 5s infinite linear;
+}
+@keyframes myanimation{
+    100%{
+           transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.cube div{
+    height: 200px;
+    width: 200px;
+    /* background-color: red; */
+    position: absolute;
+    /* border: 2px solid white; */
+    opacity: 0.5;
+}
+.left{
+    transform: rotateY(90deg) translateZ(100px);
+     background-color: green;
+}
+.right{
+     transform: rotateY(90deg) translateZ(-100px);
+      background-color: red;
+}
+.top{
+     transform: rotateX(90deg) translateZ(100px);
+      background-color: yellow;
+}
+.bottom{
+     transform: rotateX(90deg) translateZ(-100px);
+      background-color:rgb(171, 68, 85);
+}
+.front{
+     transform: translateZ(-100px);
+      background-color: blue;
+}
+.back{
+     transform: translateZ(100px);
+      background-color: violet;
+}
+.b1{
+    transform: rotateY(90deg) translateZ(100px);
+     background-color: red;
+}
+.b2{
+    transform: rotateY(90deg) translateZ(-100px);
+     background-color: red;
+}
+.b3{
+    transform: rotateY(90deg) translateZ(0px);
+     background-color: red;
+}
+/* .b4{
+    transform: rotateX(90deg) translateZ(100px);
+     background-color: red;
+} */
+.b5{
+    transform: rotateX(90deg) translateZ(-100px);
+     background-color: red;
+}
+.b6{
+    transform: rotateX(90deg) translateZ(0px);
+     background-color: red;
+}
+.b7{
+    transform: rotateX(90deg) translateZ(0px);
+     background-color: red;
+}
+.b8{
+    transform: rotateX(90deg) translateZ(0px);
+     background-color: red;
+}
+

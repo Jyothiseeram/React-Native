@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100svh;
+            
+        }
+        .demo{
+            z-index: 1;
+            position: relative;
+            overflow: hidden;
+             /* border: 2px solid black; */
+             padding: 10px 20px;
+             height: 30px;
+             width: 80px;
+             justify-content: center;
+            align-items: center;
+            display: flex;
+            border-radius: 10px;
+            color: white;
+           
+        }
+        .demo::before{
+             position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: yellowgreen;
+            z-index: -1;
+            transition: transform 0.5s linear;
+            transform: translateX(0px) skew(45deg);
+             background-color: black;
+             }
+        .demo::after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color:greenyellow;
+             background-color: black;
+             color:black;
+            z-index: -1;
+            transition: transform 0.5s linear;
+            /* transform: translateX(0px) skew(135deg); */
+        }
+        .demo:hover::before{
+            /* transform: translateX(60px) skew(145deg); */
+            background-image: linear-gradient(to right,yellowgreen,gold);
+            
+        }
+         .demo:hover::after{
+            /* transform: translateX(-60px)skew(145deg); */
+            background-image: linear-gradient(to left,yellowgreen,gold);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">Click me</div>
+</body>
+</html>

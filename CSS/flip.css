@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+     height: 100svh;
+}
+.grandparent{
+ perspective: 1000px;
+}
+.parent{
+   
+   width: 250px;
+   height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   transform-style: preserve-3d;
+   position: relative;
+    transition: transform 1s linear;
+}
+.front{
+    position: absolute;
+   top: 0px;
+    width: 250px;
+    height: 250px;
+    background-color:darksalmon;
+    flex-direction: column;
+   
+      display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back{
+    position: absolute;
+    top:0px;
+    width: 250px;
+    height: 250px;
+    background-color: aquamarine;
+    flex-direction: column;
+       backface-visibility: hidden;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+.parent:hover{
+    transform: rotateY(180deg);
+}
