@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .parent{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-color: beige;
+            
+        }
+        .road{
+            width: 100%;
+            height: 200px;
+            background-color: black;
+            position: fixed;
+            bottom: 0px;
+            z-index: 2;
+        }
+        .line{
+            width: 150px;
+            height: 15px;
+            position: absolute;
+            background-color: white;
+            top: 90px;
+            left:30px;
+        }
+         .line1{
+            width: 10%;
+            height: 15px;
+            position: absolute;
+            background-color: white;
+            top: 90px;
+            left:250px;
+        }
+         .line2{
+            width: 10%;
+            height: 15px;
+            position: absolute;
+            background-color: white;
+            top: 90px;
+            left:460px;
+        }
+         .lin{
+            width: 10%;
+            height: 15px;
+            position: absolute;
+            background-color: white;
+            top: 90px;
+            left:680px;
+        }
+         .line3{
+            width: 10%;
+            height: 15px;
+            position: absolute;
+            background-color: white;
+            top: 90px;
+            right:440px;
+        }
+         .line4{
+            width: 10%;
+            height: 15px;
+            position: absolute;
+            background-color: white;
+            top: 90px;
+            right:210px;
+        }
+         .line5{
+            
+            width: 10%;
+            height: 15px;
+            position: absolute;
+            background-color: white;
+            top: 90px;
+           right:0px;
+        }
+        .tree{
+            height: 200px;
+            width: 15px;
+            background-color: brown;
+            position: absolute;
+            top:290px;
+            left: 100px;
+            z-index:0;
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            background-color:green ;
+            border-radius: 50%;
+            position: absolute;
+            top:210px;
+            left: 20px;
+            z-index:1;
+            }
+        .circle1{
+            width: 100px;
+            height: 100px;
+            background-color:green ;
+            border-radius: 50%;
+            position: absolute;
+            top:210px;
+            left: 70px;
+            z-index: 2;
+            }
+            .circle2{
+            width: 100px;
+            height: 100px;
+            background-color:green ;
+            border-radius: 50%;
+            position: absolute;
+            top:240px;
+            left: 90px;
+            }
+            .circle3{
+            width: 100px;
+            height: 100px;
+            background-color:green ;
+            border-radius: 50%;
+            position: absolute;
+            top:240px;
+            left: 20px;
+            }
+             .car {
+            position: absolute;
+            bottom: 60px; /* place car above road bottom */
+            left: 300px;
+            width: 150px;
+            height: 60px;
+            z-index: 10; /* front of everything */
+        }
+         .car1{
+            position: absolute;
+            bottom: 90px; /* place car above road bottom */
+            left: 850px;
+            width: 150px;
+            height: 60px;
+            z-index: 10; /* front of everything */
+        }
+         .car-body1{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(135deg, #06c03e, rgba(12, 81, 16, 0.945));
+            border-radius: 15px 15px 10px 10px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        }
+        .car-body {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(135deg, #ff3e00, #cc2b00);
+            border-radius: 15px 15px 10px 10px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        }
+        .car-roof {
+            position: absolute;
+            top: -30px;
+            left: 20px;
+            width: 90px;
+            height: 40px;
+            background: #ff6b3e;
+            border-radius: 12px 12px 0 0;
+            box-shadow: inset 0 3px 5px rgba(255,255,255,0.3);
+            border: 2px solid #cc2b00;
+        }
+        .wheel {
+            position: absolute;
+            bottom: -15px;
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle at center, #333, #000);
+            border-radius: 50%;
+            border: 5px solid #555;
+            box-shadow: inset 0 3px 5px rgba(255,255,255,0.15);
+        }
+        .wheel.left {
+            left: 15px;
+        }
+        .wheel.right {
+            right: 15px;
+        }
+
+        .sun{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: #f0a32f;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            /* right: 250px;
+            top:90px; */
+            }
+            .sunshadow{
+                height: 130px;
+                width: 130px;
+                background-image: radial-gradient(rgb(237, 203, 79),white);
+                 top:90px;
+                  right: 250px;
+                  position: absolute;
+                border-radius: 50%;
+            }
+            
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="sunshadow">
+        <div class="sun"></div>
+        </div>
+        <div class="circle"></div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="tree"></div>
+
+        <div class="car">
+            <div class="car-body"></div>
+            <div class="car-roof"></div>
+            <div class="wheel left"></div>
+            <div class="wheel right"></div>
+        </div>
+        <div class="car1">
+            <div class="car-body1"></div>
+            <div class="car-roof"></div>
+            <div class="wheel left"></div>
+            <div class="wheel right"></div>
+        </div>
+
+        <div class="road">
+            <div class="line"></div>
+            <div class="line1"></div>
+             <div class="line2"></div>
+             <div class="lin"></div>
+             <div class="line3"></div>
+             <div class="line4"></div>
+             <div class="line5"></div>
+        </div>
+   
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .demo{
+           width:150px;
+           height: 150px;
+           border-radius: 50%;
+            background-color: aqua;
+            animation: anime 3s infinite linear;
+            animation-iteration-count: infinite;
+            position: relative;
+            animation-timing-function: ease;
+            /* animation-direction: alternate-reverse; */
+        }
+        .demo1{
+           width:150px;
+           height: 150px;
+           border-radius: 50%;
+            background-color: red;
+            animation: anime 3s infinite linear;
+            animation-iteration-count: infinite;
+            position: relative;
+            animation-timing-function: ease-in;
+            /* animation-direction: alternate; */
+
+        }
+        .demo2{
+           width:150px;
+           height: 150px;
+           border-radius: 50%;
+            background-color: burlywood;
+            animation: anime 3s infinite linear;
+            animation-iteration-count: infinite;
+            position: relative;
+            animation-timing-function:ease-out ;
+
+        }
+        @keyframes anime{
+            0%{
+                left: 0px;
+                background-color: aqua;
+            }
+            50%{
+                background-color: lawngreen;
+                
+                
+            }
+            100%{
+                left: 1000px;
+                background-color: gold;
+                transform: rotate(360deg) translate(30vw, 40vh);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="demo"></div>
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+</body>
+</html>

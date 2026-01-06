@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        margin: 0;
+        overflow: hidden;
+        background: linear-gradient(to top, #87ceeb, #fff);
+    }
+    .container {
+       width: 100vw;
+        height: 100vh;
+        position: relative;
+        left:0px;
+        right:0px;
+        /* background: linear-gradient(lightyellow,rgba(255, 166, 0, 0.676)); */
+    }
+    
+    .road{
+            width: 100%;
+            height: 200px;
+            background-color: black;
+            position: fixed;
+            bottom: 0px;   
+            left: -1px;
+        }
+    .line{
+            width: 150px;
+            height: 15px;
+            position: absolute;
+            background-color: white;
+             top: 90px;
+          
+        }    
+     .line:nth-child(1) { left: 30px; }
+     .line:nth-child(2) { left: 240px; }
+     .line:nth-child(3) { left: 440px; }  
+     .line:nth-child(4) { left: 640px; }   
+     .line:nth-child(5) { left: 840px; }   
+     .line:nth-child(6) { left: 1040px; }
+     .line:nth-child(7) { left: 1240px; } 
+     .line:nth-child(8) { left: 1440px; }    
+
+     .trunk{
+        height: 200px;
+            width:20px;
+            background-color: rgb(109, 29, 29);
+            position: absolute;
+            top:350px;
+            left: 100px;
+     }
+     .trunk2{
+            height: 100px;
+            width:20px;
+            background-color: rgb(109, 29, 29);
+            position: absolute;
+            top:450px;
+           
+     }
+     .circle{
+            width: 100px;
+            height: 100px;
+            top: 290px;
+            left: 20px;
+            background-color:green ;
+            border-radius: 50%;
+            position: absolute;
+            }
+         .circle:nth-child(1){top:290px;left: 20px;z-index:1;}
+         .circle:nth-child(2){top:270px;left:70px;z-index: 2;}    
+         .circle:nth-child(3){top:295px;left: 90px;z-index: 0;}  
+
+      .righttree{
+        position: absolute;
+        right: 270px;
+      } 
+        
+
+.sky {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+}
+
+.sun {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #FFD700, #FFA500);
+  border-radius: 50%;
+  position: absolute;
+  top: 80vh;
+  right: -120px;
+  animation: sunsetArc 10s ease-in-out forwards;
+}
+
+ @keyframes sunsetArc {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(25vw, 10vh);
+  }
+  50% {
+    transform: translate(50vw, 25vh);
+  }
+  75% {
+    transform: translate(75vw, 50vh);
+  }
+  100% {
+    transform: translate(100vw, 100vh);
+  }
+}
+
+
+
+  @media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sun"></div>
+        <div class="cloud cloud1"></div>
+        <div>
+
+          
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="trunk"></div>
+        </div>
+        <div class="righttree">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="trunk"></div>
+
+        </div>
+        
+        <div class="road">
+            
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+</body>
+</html>

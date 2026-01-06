@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Horizontal Visiting Card</title>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background-color: #ffffff;
+      width: 700px;
+      height: 250px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      gap: 30px;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #007acc;
+    }
+
+    .details {
+      flex: 1;
+    }
+
+    .details h2 {
+      margin: 0;
+      color: #333;
+    }
+
+    .details h4 {
+      margin: 5px 0 10px;
+      font-weight: normal;
+      color: #777;
+    }
+
+    .details p {
+      margin: 5px 0 10px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .contact {
+      font-size: 14px;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .contact a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .qr-code img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .qr-code p {
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img class="profile-pic" src="/images/pic.jpg" alt="Profile Photo">
+
+    <div class="details">
+      <h2>Jyothi Seeram</h2>
+      <h4>Web Developer</h4>
+      <p>Creating clean, responsive, and modern websites.</p>
+
+      <div class="contact">
+        📞 +91 6300959596<br>
+        📧 <a href="mailto:jyothiseeram624@gmail.com">jyothiseeram624@gmail.com</a><br>
+        🌐 <a href="https://yourwebsite.com" target="_blank">yourwebsite.com</a><br>
+         <i class="fa-brands fa-square-instagram" style="color: rgb(235, 90, 90);"></i><a href="https://www.instagram.com/__itzmeyyarrr._/" target="_blank">  Instagram</a><br>
+          <i class="fa-brands fa-linkedin"></i><a href="https://linkedin.com/in/jyothiseeram" target="_blank">  LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="qr-code">
+      <!-- <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://yourwebsite.com&size=100x100" alt="QR Code">
+      <p>Scan to visit</p>
+    </div> --> 
+    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="small" data-theme="light" data-type="VERTICAL" data-vanity="jyothiseeram" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/jyothiseeram?trk=profile-badge">Jyothi Seeram</a></div>
+          </div>    
+  </div>
+
+</body>
+</html>

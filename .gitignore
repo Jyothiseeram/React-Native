@@ -1,0 +1,27 @@
+Bootstrap/ 
+
+# OS / Editor
+.vscode/
+.tmp.driveupload/
+
+# Node / Vite
+node_modules/
+dist/
+build/
+
+# Archives
+*.zip
+
+# Media (keep source images only if needed)
+*.mp3
+*.mp4
+
+# Downloads / scraped files
+*_files/
+
+# Secrets
+sshkey
+sshkey.pub
+
+# Logs
+*.log

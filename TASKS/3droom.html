@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title></title>
+  <style>
+    body {
+      margin: 0;
+      background: #ead8d8;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1000px;
+     
+    }
+
+    .room {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      transform-style: preserve-3d;
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    .wall, .floor, .ceiling {
+      position: absolute;
+      background: #f0f0f0;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      
+      backface-visibility: hidden;
+    }
+
+    .wall {
+      width: 600px;
+      height: 400px;
+      top: 0;
+      left: 0;
+    }
+
+    .back {
+      transform: translateZ(-300px);
+    }
+
+    .left {
+      width: 600px;
+      height: 400px;
+      top: 0;
+      left: 0;
+      transform-origin: left center;
+      transform: rotateY(90deg) translateX(-300px);
+    }
+
+    .right {
+      width: 600px;
+      height: 400px;
+      top: 0;
+      right: 0;
+      transform-origin: right center;
+      transform: rotateY(-90deg) translateX(300px);
+    }
+
+    .floor {
+      width: 600px;
+      height: 600px; 
+      bottom: 0;
+      left: 0;
+      transform-origin: bottom center;
+ 
+      transform: rotateX(90deg) translateY(300px);
+
+      box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.05);
+      border-radius: 0 0 8px 8px;
+    }
+
+    .ceiling {
+      width: 600px;
+      height: 600px; 
+      top: 0;
+      left: 0;
+      transform-origin: top center;
+      transform: rotateX(-90deg) translateY(-300px);
+      border-radius: 8px 8px 0 0;
+      box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="room">
+    <div class="wall back"></div>
+    <div class="wall left"></div>
+    <div class="wall right"></div>
+    <div class="floor"></div>
+    <div class="ceiling"></div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Combinators Example</title>
+  <style>
+    /* Descendant Combinator: any <span> inside a <div> */
+    div span {
+      color: red;
+    }
+
+    /* Child Combinator: direct child <p> of <div> */
+    div > p {
+      font-weight: bold;
+      background-color: red;
+    }
+
+    /* Adjacent Sibling Combinator: <h2> directly after <h1> */
+    h1 + h2 {
+      color: blue;
+      background-color: lawngreen;
+    }
+
+    /* General Sibling Combinator: all <p> siblings after <h1> */
+    h1 ~ p {
+      background-color: yellow;
+    }
+     button:hover {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Style for input when focused */
+    input:focus {
+      border: 2px solid blue;
+      outline: none;
+      background-color:red;
+    }
+
+    /* Base styles */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <p>This is a direct child of div.</p>
+    <section>
+      <p>This is a nested child, not matched by div > p.</p>
+    </section>
+    <span>This span is inside a div (descendant).</span>
+  </div>
+
+  <h1>Heading 1</h1>
+  <h2>Heading 2 (adjacent to h1)</h2>
+  <p>Paragraph after h1 (general sibling)</p>
+  <p>Another paragraph after h1</p>
+
+  <h2>:hover and :focus Example</h2>
+
+  <label for="name">Enter your name:</label><br>
+  <input type="text" id="name" placeholder="Type here..."><br>
+
+  <button>Hover Over Me</button>
+
+</body>
+</html>

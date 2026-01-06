@@ -1,0 +1,282 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+    }
+    .container{
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+
+    }
+
+body {
+      overflow: hidden;
+      animation: skyDayToNight 10s linear forwards;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    @keyframes skyDayToNight {
+      0%   { background: linear-gradient(to top, #87ceeb, #fff); }
+      50%  { background: linear-gradient(to top, #fca903, #87ceeb); }
+      100% { background: linear-gradient(to top, #0a0a30, #000); }
+    }
+
+.road {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background: #000;
+    }
+    
+.line {
+      position: absolute;
+      top: 90px;
+      width: 150px;
+      height: 15px;
+      background: #fff;
+    }
+    
+    .line:nth-child(1) { left: 30px; }
+    .line:nth-child(2) { left: 240px; }
+    .line:nth-child(3) { left: 440px; }
+    .line:nth-child(4) { left: 640px; }
+    .line:nth-child(5) { left: 840px; }
+    .line:nth-child(6) { left: 1040px; }
+    .line:nth-child(7) { left: 1240px; }
+    .line:nth-child(8) { left: 1440px; }    
+
+.trunk {
+      position: absolute;
+      width: 20px;
+      height: 200px;
+      background: #6d1d1d;
+      top: 350px;
+      left: 100px;
+      
+    }    
+
+.circle {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: green;
+      border-radius: 50%;
+     
+    }
+    
+    .circle:nth-child(1) { top: 290px; left: 20px; z-index: 1;}
+    .circle:nth-child(2) { top: 270px; left: 70px;z-index: 2; }
+    .circle:nth-child(3) { top: 295px; left: 90px; z-index: 0;}
+
+.righttree {
+      position: absolute;
+      right: 270px;
+      display: flex;
+    }
+    
+.righttree .trunk {
+      left: 0;
+      top: 350px;
+    }
+    
+    .righttree .circle:nth-child(1) { top: 290px; left: -80px; }
+    .righttree .circle:nth-child(2) { top: 270px; left: -30px; }
+    .righttree .circle:nth-child(3) { top: 295px; left: -10px; }
+    .righttree .circle:nth-child(4) { top: 290px; left: -10px; }    
+
+.bush {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: green;
+      border-radius: 50%;
+     
+    }
+    
+    .bush:nth-child(1) { top: 290px; left: 20px; }
+    .bush:nth-child(2) { top: 270px; left: 70px;}
+    .bush:nth-child(3) { top: 295px; left: 90px; }    
+
+.sun {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right:-50px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #FFD700 0%, #FFA500 70%);
+      box-shadow: 0 0 60px 20px rgba(255, 215, 0, 0.6);
+      animation: sunsetArc 6s ease-in-out forwards;
+      animation-timing-function: linear;
+    }
+    
+     @keyframes sunsetArc {
+  0% {
+    transform: rotate(360deg) translate(10vw, 10vh);
+  }
+  25% {
+    transform:  rotate(360deg) translate(25vw, 10vh);
+  }
+  50% {
+    transform:rotate(360deg)  translate(50vw, 14vh);
+  }
+  75% {
+    transform:rotate(360deg)  translate(75vw, 26vh);
+  }
+  100% {
+    transform: rotate(360deg) translate(110vw, 35vh);
+  }
+}
+
+.moon {
+      position: absolute;
+      top: 15vh;
+      left: 80vw;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffffff, #fdf4f4 70%);
+      box-shadow: 0 0 30px 10px rgba(255,255,255,0.2);
+      opacity: 0;
+      animation: moonFadeIn 6s ease-in-out forwards;
+      animation-delay: 4s;
+    }
+
+    @keyframes moonFadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+
+    .star {
+  position: absolute;
+  font-size: 14px;
+  color: white;
+  opacity: 0;
+  animation: starFadeIn 2s ease-in forwards, twinkle 2s ease-in-out infinite alternate;
+  animation-delay: 7s;
+  z-index: 10;
+}
+
+@keyframes starFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.6; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1.1); }
+}
+
+
+.cloud{
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: white;
+        border-radius: 50%;
+        opacity: 0.8;
+        left:0px;
+      animation: cloudMove 28s linear infinite;
+      position: absolute;
+  background: #fff;  
+  opacity: 1;
+    }
+
+    @keyframes cloudMove {
+      0% { transform: translateX(-50vw); }
+      100% { transform: translateX(100vw); }
+    }
+
+    .cloud:nth-child(1) { top: 90px; left: 20px; z-index: 1;}
+    .cloud:nth-child(2) { top: 75px; left:50px; z-index: 2; }
+    .cloud:nth-child(3) { top: 90px;  left:70px; z-index: 0;}    
+
+.horse {
+    position: absolute;
+    bottom: 120px;
+    left: -150px;
+    width: 300px;
+    height: 230px;
+    animation: horseRun 16s linear infinite;
+    z-index: 10;
+    
+  
+}    
+@keyframes horseRun {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(130vw);
+  }
+}
+
+.thar {
+  position: absolute;
+  bottom: 30px;
+  left: -360px;
+  width: 380px;
+  height: 300px;
+  animation: tharDrive 20s linear infinite;
+  animation-delay: 3s;
+  z-index: 9;
+}
+
+@keyframes tharDrive {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(130vw);
+  }
+}
+
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  font-size: 1.5em;
+  color: white;
+  opacity: 0;
+  animation: snow-fall 10s linear infinite;
+  animation-delay: 8s; 
+}
+
+
+.snowflake:nth-child(1) { left: 10%; animation-duration: 8s; }
+.snowflake:nth-child(2) { left: 25%; animation-duration: 9s; }
+.snowflake:nth-child(3) { left: 40%; animation-duration: 7s; }
+.snowflake:nth-child(4) { left: 55%; animation-duration: 10s;}
+.snowflake:nth-child(5) { left: 70%; animation-duration: 6s; }
+.snowflake:nth-child(6) { left: 85%; animation-duration: 9s; }
+.snowflake:nth-child(7) { left: 30%; animation-duration: 7s; }
+.snowflake:nth-child(8) { left: 60%; animation-duration: 8s; }
+
+@keyframes snow-fall {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #para1{
+             font-size: 96px;
+             border-top: 1px;
+             border-top-color: red;
+             border-top-style: solid;
+             border-right: 3px;
+             border-right-color: green;
+             border-right-style: dotted;
+             border-bottom: 6px;
+             border-bottom-color: black;
+             border-bottom-style: groove;
+        }
+        #para2{
+            font-size: 1in;
+            border: 10px solid lightcoral;
+            border-radius: 50px;
+        }
+        .parent{
+           height: 500px;
+        }
+        .child{
+            height:25%;;
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Font size</h1><hr>
+    <!--                         absolute notation      relative notations
+    1 pixal = 1.333points,                               1 rem  = 16% from parent
+    1 inche = 96 pixals,                                 1 em   =
+    1 div   = 1 inche
+    centimeters,millimeters -->
+
+    <div id="para1">Welcome to our website!</div>
+    <br><br>
+    <div id="para2">Welcome to our website!</div>
+    <div class="parent">
+    <img class="child" src="https://as1.ftcdn.net/v2/jpg/12/01/94/92/1000_F_1201949220_L0WY4gRHZy8o7odB906RMWi7yfL9wQ2z.webp" >
+    <img src="https://upload.wikimedia.org/wikipedia/en/2/2f/Jerry_Mouse.png">
+    </div>
+</body>
+</html>

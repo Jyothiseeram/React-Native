@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <div class="bar" onclick="Open()">&#9776;</div>
+    <div class="sidebar">
+        <div onclick="Close()">&#10060;</div>
+        <div>Home</div>
+        <div>Contact</div>
+        <div>Services</div>
+        <div>About</div>
+        <div>Community</div>
+    </div>
+   <script>
+    function Close()
+    {
+        document.getElementsByClassName("sidebar")[0].style.left="-300px";
+    }
+    function Open()
+    {
+        document.getElementsByClassName("sidebar")[0].style.left="0px";
+    }
+   </script>
+</body>
+</html>
